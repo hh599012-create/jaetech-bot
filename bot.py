@@ -29,7 +29,6 @@ async def on_message(message):
 
     # 숫자 입력 감지 (1~7)
     if content.isdigit() and 1 <= int(content) <= 7:
-        await message.channel.send(f'✅ **{content}번** 선택! 콘텐츠 생성 중... (1~2분 걸려요 ☕)')
 
         # Apps Script 웹앱 호출
         url = f'{APPS_SCRIPT_URL}?action=select&number={content}'
